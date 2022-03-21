@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alpaca Generator</title>
+    <link rel="stylesheet" href="alpaca.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://kit.fontawesome.com/020d576912.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="html2canvas.min.js"></script>
+    <script defer src="alpaca.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <h1>ALPACA GENERATOR</h1>
+      <div class="content">
+        <div>
+          <div class="alpacaImg">
+            <!-- Default Alpaca -->
+            <img src="alpaca/neck/default.png" alt="" class="neck" />
+            <img src="alpaca/nose.png" alt="" class="nose" />
+            <img src="alpaca/mouth/default.png" alt="" class="mouth" />
+            <img src="alpaca/hair/default.png" alt="" class="hair" />
+            <img src="alpaca/leg/default.png" alt="" class="leg" />
+            <img src="alpaca/ears/default.png" alt="" class="ears" />
+            <img src="alpaca/eyes/default.png" alt="" class="eyes" />
+            <!-- Accessories -->
+            <div class="accessories">
+              <img
+                src="alpaca/accessories/earings.png"
+                alt=""
+                class="earings acc noDisp"
+              />
+              <img
+                src="alpaca/accessories/flower.png"
+                alt=""
+                class="flower acc noDisp"
+              />
+              <img
+                src="alpaca/accessories/glasses.png"
+                alt=""
+                class="glasses acc noDisp"
+              />
+              <img
+                src="alpaca/accessories/headphone.png"
+                alt=""
+                class="headphone acc noDisp"
+              />
+            </div>
+          </div>
+          <button class="random"><i class="fa-solid fa-shuffle"></i> Random</button>
+          <button class="download"><i class="fa-solid fa-arrow-down-to-bracket"></i> Download</button>
+        </div>
+        <div class="choices">
+          <h2 style="font-size: 15px; color: rgba(2, 24, 56, 0.911)">
+            ACCESSORIZE THE ALPACA'S
+          </h2>
+          <div class="buttons">
+            <button class="hairB butt active">Hair</button>
+            <button class="earsB butt">Ears</button>
+            <button class="eyesB butt">Eyes</button>
+            <button class="mouthB butt">Mouth</button>
+            <button class="neckB butt">Neck</button>
+            <button class="legB butt">Leg</button>
+            <button class="accessoriesB butt">Accessories</button>
+            <button class="backgroundB butt">Background</button>
+          </div>
+          <h2 style="font-size: 15px; color: rgba(2, 24, 56, 0.911)">STYLE</h2>
+          <div class="styles">
+            <div class="hairStyle stylesConts">
+              <button
+                class="default dispHair active"
+                data-url="alpaca/hair/default.png"
+              >
+                Default
+              </button>
+              <button class="curls dispHair" data-url="alpaca/hair/curls.png">
+                Curls
+              </button>
+              <button class="short dispHair" data-url="alpaca/hair/short.png">
+                Short
+              </button>
+              <button class="bang dispHair" data-url="alpaca/hair/bang.png">
+                Bang
+              </button>
+              <button
+                class="elegant dispHair"
+                data-url="alpaca/hair/elegant.png"
+              >
+                Elegant
+              </button>
+              <button class="quif dispHair" data-url="alpaca/hair/quiff.png">
+                Quif
+              </button>
+            </div>
+            <div class="earStyle stylesConts noDisp">
+              <button
+                class="default active dispEar"
+                data-url="alpaca/ears/default.png"
+              >
+                Default
+              </button>
+              <button
+                class="tiltBack dispEar"
+                data-url="alpaca/ears/tilt-backward.png"
+              >
+                Tilt backward
+              </button>
+              <button
+                class="tiltForward dispEar"
+                data-url="alpaca/ears/tilt-forward.png"
+              >
+                Tilt Forward
+              </button>
+            </div>
+            <div class="eyeStyle stylesConts noDisp">
+              <button
+                class="default dispEye active"
+                data-url="alpaca/eyes/default.png"
+              >
+                Default
+              </button>
+              <button class="angry dispEye" data-url="alpaca/eyes/angry.png">
+                Angry
+              </button>
+              <button
+                class="naughty dispEye"
+                data-url="alpaca/eyes/naughty.png"
+              >
+                Naughty
+              </button>
+              <button class="panda dispEye" data-url="alpaca/eyes/panda.png">
+                Panda
+              </button>
+              <button class="smart dispEye" data-url="alpaca/eyes/smart.png">
+                Smart
+              </button>
+              <button class="star dispEye" data-url="alpaca/eyes/star.png">
+                Star
+              </button>
+            </div>
+            <div class="mouthStyle stylesConts noDisp">
+              <button
+                class="default active dispMouth"
+                data-url="alpaca/mouth/default.png"
+              >
+                Default
+              </button>
+              <button
+                class="astonished dispMouth"
+                data-url="alpaca/mouth/astonished.png"
+              >
+                Astonished
+              </button>
+              <button
+                class="eating dispMouth"
+                data-url="alpaca/mouth/eating.png"
+              >
+                Eating
+              </button>
+              <button class="laugh dispMouth" data-url="alpaca/mouth/laugh.png">
+                Laugh
+              </button>
+              <button
+                class="tongue dispMouth"
+                data-url="alpaca/mouth/tongue.png"
+              >
+                Tongue
+              </button>
+            </div>
+            <div class="neckStyle stylesConts noDisp">
+              <button
+                class="default active dispNeck"
+                data-url="alpaca/neck/default.png"
+              >
+                Default
+              </button>
+              <button
+                class="backward dispNeck"
+                data-url="alpaca/neck/bend-backward.png"
+              >
+                Bend backward
+              </button>
+              <button
+                class="forwar dispNeck"
+                data-url="alpaca/neck/bend-forward.png"
+              >
+                Bend forward
+              </button>
+              <button class="thick dispNeck" data-url="alpaca/neck/thick.png">
+                Thick
+              </button>
+            </div>
+            <div class="legStyle stylesConts noDisp">
+              <button
+                class="default active dispLeg"
+                data-url="alpaca/leg/default.png"
+              >
+                Default
+              </button>
+              <button
+                class="bubbleTea dispLeg"
+                data-url="alpaca/leg/bubble-tea.png"
+              >
+                Bubble tea
+              </button>
+              <button class="cookie dispLeg" data-url="alpaca/leg/cookie.png">
+                Cookie
+              </button>
+              <button
+                class="console dispLeg"
+                data-url="alpaca/leg/game-console.png"
+              >
+                Game console
+              </button>
+              <button
+                class="tiltBack dispLeg"
+                data-url="alpaca/leg/tilt-backward.png"
+              >
+                Tilt backward
+              </button>
+              <button
+                class="tiltForward dispLeg"
+                data-url="alpaca/leg/tilt-forward.png"
+              >
+                Tilt forward
+              </button>
+            </div>
+            <div class="accessoryStyle stylesConts noDisp">
+              <button class="none dispAcc active">None</button>
+              <button class="fL dispAcc">flower</button>
+              <button class="eR dispAcc">earings</button>
+              <button class="headPH dispAcc">headphone</button>
+              <button class="gL dispAcc">glasses</button>
+            </div>
+            <div class="back stylesConts noDisp">
+              <div class="backColors">
+                <div class="blue">
+                  <button
+                    class="blue50 dispBack"
+                    style="background: url('alpaca/backgrounds/blue50.png')"
+                  ></button>
+                  <button
+                    class="blue60 dispBack"
+                    style="background: url('alpaca/backgrounds/blue60.png')"
+                  ></button>
+                  <button
+                    class="blue70 dispBack"
+                    style="background: url('alpaca/backgrounds/blue70.png')"
+                  ></button>
+                </div>
+
+                <div class="dBlue">
+                  <button
+                    class="dBlue30 dispBack"
+                    style="background: url(alpaca/backgrounds/darkblue30.png)"
+                  ></button>
+                  <button
+                    class="dBlue50 dispBack"
+                    style="background: url(alpaca/backgrounds/darkblue50.png)"
+                  ></button>
+                  <button
+                    class="dBlue70 dispBack"
+                    style="background: url(alpaca/backgrounds/darkblue70.png)"
+                  ></button>
+                </div>
+
+                <div class="green">
+                  <button
+                    class="green50 dispBack"
+                    style="background: url(alpaca/backgrounds/green50.png)"
+                  ></button>
+                  <button
+                    class="green60 dispBack"
+                    style="background: url(alpaca/backgrounds/green60.png)"
+                  ></button>
+                  <button
+                    class="green70 dispBack"
+                    style="background: url(alpaca/backgrounds/green70.png)"
+                  ></button>
+                </div>
+
+                <div class="grey">
+                  <button
+                    class="grey40 dispBack"
+                    style="background: url(alpaca/backgrounds/grey40.png)"
+                  ></button>
+                  <button
+                    class="grey70 dispBack"
+                    style="background: url(alpaca/backgrounds/grey70.png)"
+                  ></button>
+                  <button
+                    class="grey80 dispBack"
+                    style="background: url(alpaca/backgrounds/grey80.png)"
+                  ></button>
+                </div>
+
+                <div class="red">
+                  <button
+                    class="red50 dispBack"
+                    style="background: url(alpaca/backgrounds/red50.png)"
+                  ></button>
+                  <button
+                    class="red60 dispBack"
+                    style="background: url(alpaca/backgrounds/red60.png)"
+                  ></button>
+                  <button
+                    class="red70 dispBack"
+                    style="background: url(alpaca/backgrounds/red70.png)"
+                  ></button>
+                </div>
+
+                <div class="yellow">
+                  <button
+                    class="yellow50 dispBack"
+                    style="background: url(alpaca/backgrounds/yellow50.png)"
+                  ></button>
+                  <button
+                    class="yellow60 dispBack"
+                    style="background: url(alpaca/backgrounds/yellow60.png)"
+                  ></button>
+                  <button
+                    class="yellow70 dispBack"
+                    style="background: url(alpaca/backgrounds/yellow70.png)"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
